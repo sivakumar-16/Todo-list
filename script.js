@@ -11,13 +11,20 @@ button.addEventListener("click", () => {
   const todoText = input.value;
   if (todoText !== "") {
     if (editIndex === -1) {
+      if (!todos.includes(todoText)) {
       todos.push(todoText);
+      }else{
+        alert('this task already exsist')
+      }
+    
     } else {
       todos[editIndex] = todoText;
-      editIndex = -1;
+      editIndex = "";
     }
     updateTodoList();
     input.value = "";
+  }else{
+    alert('please insert text')
   }
 });
 
