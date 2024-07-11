@@ -19,7 +19,7 @@ button.addEventListener("click", () => {
     
     } else {
       todos[editIndex] = todoText;
-      editIndex = "";
+      editIndex = -1;
     }
     updateTodoList();
     input.value = "";
